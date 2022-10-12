@@ -1,0 +1,14 @@
+<p>nhập số thứ nhất</p>
+<input #so1 type="number">
+<p>nhập số thứ hai</p>
+<input #so2 type="number"><br>
+<p>nhập phép tính</p>
+<select #select name="" id="">
+  <option  value="+">cộng</option>
+  <option  value="-">trừ</option>
+  <option  value="*">nhân</option>
+  <option  value="/">chia</option>
+</select><br><br>
+<button type= "submit" (click)="tinh(so1.value, so2.value, select.value)">tính</button><br>
+<p *ngIf="ketqua">kết quả là : {{ketqua}}</p>
+<p>{{mis}}</p>

@@ -1,0 +1,13 @@
+
+<p>product works!</p>
+<input #phone placeholder="phone number" /><br><br>
+<p>{{ title }}</p>
+<p>{{day| date:"fullDate"}}</p>
+<!-- <input #phone placeholder="phone number" /><br> -->
+
+<!-- lots of other elements -->
+
+<!-- phone refers to the input element; pass its `value` to an event handler -->
+<button type="button" (click)="callPhone(phone.value)">Call</button><br>
+<!-- <img [src]="imgUrl"> -->
+<input [(ngModel)]="title" type="text">

@@ -21,7 +21,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    // "noImplicitAny": true,/////không đoán được kiểu dữ liệu->báo lỗi
+    // "strictNullChecks": true,///////kiểm tra xem có null không trước khi run
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
