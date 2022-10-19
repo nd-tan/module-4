@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+// import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-bai2',
   templateUrl: './bai2.component.html',
   styleUrls: ['./bai2.component.css'],
 })
 export class Bai2Component implements OnInit {
+  currentItem: string[] = ['IPhone 12','sam sum','nokia'];
   constructor() {}
-
+  items :any[]=[];
+  addItem(arr:any[]){
+   this.items=arr;
+   }
   ngOnInit(): void {}
   imgUrl: string =
     'https://pluralsight.imgix.net/author/lg/51b653bf-bb6e-48d0-9fd2-ca8db65bf1e6.jpg';
-  ketqua: number = 0;
+  ketqua:number =0;
   mis: string = '';
   tinh(so1: string, so2: string, select: any) {
     this.mis = '';
@@ -43,5 +47,8 @@ export class Bai2Component implements OnInit {
         this.mis = '';
         break;
     }
+  }
+  chaclick(){
+    alert('cha click');
   }
 }

@@ -1,4 +1,4 @@
-<p>nhập số thứ nhất</p>
+<!-- <p>nhập số thứ nhất</p>
 <input #so1 type="number">
 <p>nhập số thứ hai</p>
 <input #so2 type="number"><br>
@@ -10,5 +10,13 @@
   <option  value="/">chia</option>
 </select><br><br>
 <button type= "submit" (click)="tinh(so1.value, so2.value, select.value)">tính</button><br>
-<p *ngIf="ketqua">kết quả là : {{ketqua}}</p>
-<p>{{mis}}</p>
+<p *ngIf="ketqua"  >kết quả là : {{ketqua}}</p>
+<p>{{mis}}</p> -->
+
+<p>đây là bài 2</p>
+<!-- <app-bai21 ></app-bai21> -->
+<app-bai21 [item]="currentItem" (newItemEvent)="addItem($event)" (conclick)="chaclick()"></app-bai21>
+<p>đây là bài 2</p>
+<ul>
+  <li *ngFor="let item of items">name: {{item.name}}<br> age:{{item.age}}</li>
+</ul>

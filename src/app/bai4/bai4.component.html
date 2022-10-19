@@ -1,0 +1,34 @@
+<p>Game tim so</p>
+<div class="contrainer">
+  <input type="button" value="Play" (click)="play()">&nbsp;&nbsp;
+  <input type="button" value="Reset" (click)="reset()">&nbsp;&nbsp;
+  Điểm số của bạn là: &nbsp;<label> {{mark}}</label>&nbsp;&nbsp;
+  Thời gian còn lại là: <label>{{timeleft}}</label>
+
+  <div
+    class="row"
+    [ngStyle]="{
+      marginTop: '20px'
+    }"
+  >
+    <div
+      class="col-lg-1"
+      [ngStyle]="{
+        marginBottom: '5px'
+      }"
+      *ngFor="let number of numbers"
+    >
+      <input
+        type="button"
+        [value]="number"
+        *ngIf="show"
+        (click)="playgame(number)"
+        class="btn btn-info btn-block"
+        style="width:60px; margin:20px"
+        [ngClass]="{
+          'btn-danger':number<=mark
+        }"
+      />
+    </div>
+  </div>
+</div>

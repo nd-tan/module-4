@@ -1,0 +1,50 @@
+<p>bai3 works!</p>
+<div class="container">
+  <table>
+    <tr>
+      <td colspan="3"><input #cocu type="text" value="{{ketqua}}"></td>
+    </tr>
+    <tr>
+      <td><button #a class="btn btn-info btn-block" (click)="coculate(a.value)" value="1">1</button></td>
+      <td><button #b class="btn btn-info btn-block" (click)="coculate(b.value)" value="2">2</button></td>
+      <td><button #c class="btn btn-info btn-block" (click)="coculate(c.value)" value="3">3</button></td>
+      <td><button #d  class="btn btn-info btn-block"(click)="sum(cocu.value)" value="+">+</button></td>
+    </tr>
+    <tr>
+      <td><button #e class="btn btn-info btn-block" (click)="coculate(e.value)" value="4">4</button></td>
+      <td><button #f class="btn btn-info btn-block" (click)="coculate(f.value)" value="5">5</button></td>
+      <td><button #g class="btn btn-info btn-block" (click)="coculate(g.value)" value="6">6</button></td>
+      <td><button #h class="btn btn-info btn-block" (click)="brand(cocu.value)" value="-">-</button></td>
+    </tr>
+    <tr>
+      <td><button #i class="btn btn-info btn-block" (click)="coculate(i.value)" value="7">7</button></td>
+      <td><button #k class="btn btn-info btn-block" (click)="coculate(k.value)" value="8">8</button></td>
+      <td><button #l class="btn btn-info btn-block" (click)="coculate(l.value)" value="9">9</button></td>
+      <td><button #m class="btn btn-info btn-block" (click)="multi(cocu.value)" value="*">*</button></td>
+    </tr>
+    <tr>
+      <td><button #n class="btn btn-info btn-block" (click)="coculate(n.value)" value="0">0</button></td>
+      <td><button #o class="btn btn-danger btn-block" (click)="reset()" value="C">C</button></td>
+      <td><button #p class="btn btn-info btn-block" (click)="cocula(cocu.value)" value="=">=</button></td>
+      <td><button #q class="btn btn-info btn-block" (click)="divede(cocu.value)" value="/">/</button></td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-warning btn-block"  (click)="dele(cocu.value)" value="X">X</button></td>
+      <!-- <td><div [ngClass]="'red size20'"> Red Text with Size 20px </div></td> -->
+
+    </tr>
+  </table>
+</div>
+
+
+<div>
+
+  <input [(ngModel)]="color" />
+  <div [ngStyle]="set()">Change my color</div>
+  <!-- <p [ngStyle]="{'color': 'purple',
+                 'font-size': '20px',
+                 'font-weight': 'bold'}">
+       Multiple styles
+  </p> -->
+</div>
+

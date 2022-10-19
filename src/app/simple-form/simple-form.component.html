@@ -1,0 +1,22 @@
+<p>simple-form works!</p>
+<div class="container">
+  <form [formGroup]="formProfile" (ngSubmit)="onSubmit()" class="form-horizontal" novalidate autocomplete="off">
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control" formControlName="email" name="email">
+    <small class="label label-danger"
+  *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['email']">sai cu phap</small>
+</div>
+<div class="form-group">
+  <label>UserName</label>
+  <input type="text" class="form-control" formControlName="username" name="username">
+  <small class="label label-danger"
+  *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['required']">không để rỗng</small>
+  <small class="label label-danger"
+  *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['minlength']">ít nhất 3 kí tự</small>
+
+</div>
+<button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
+<!-- <button (click)="onResetForm()" type="button" class="btn btn-danger">Reset</button> -->
+</form>
+</div>
