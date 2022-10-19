@@ -27,18 +27,6 @@ export class ProductEditComponent implements OnInit {
           Validators.required,
           Validators.minLength(3)
         ]),
-        price: new FormControl(product.price,[
-          Validators.required,
-          Validators.minLength(3)
-        ]),
-        quantity: new FormControl(product.quantity,[
-          Validators.required,
-          Validators.minLength(3)
-        ]),
-        description: new FormControl(product.description,[
-          Validators.required,
-          Validators.minLength(3)
-        ]),
       });
     });
   });
@@ -49,9 +37,6 @@ export class ProductEditComponent implements OnInit {
     // console.log(data);
     let product: Products = {
       name: data.name,
-      price: data.price,
-      quantity: data.quantity,
-      description: data.description,
     }
     this._ProductService.update(this.id,product).subscribe(() => {
       alert('Cập nhật sản phẩm thành công');

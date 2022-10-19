@@ -9,9 +9,7 @@
             <tr>
               <td>ID</td>
               <td>Name</td>
-              <td>Price</td>
-              <td>Quantity</td>
-              <td>Description</td>
+
               <td>Action</td>
             </tr>
         </thead>
@@ -19,9 +17,6 @@
           <tr *ngFor="let product of products; let id = index">
             <td>{{ id + 1 }}</td>
             <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.quantity }}</td>
-            <td>{{ product.description }}</td>
             <td>
               <a [routerLink]="['/product/edit', product.id]" class="btn btn-primary">Edit</a>&nbsp;&nbsp;
               <a [routerLink]="['/product/delete', product.id]" class="btn btn-danger">Delete</a>

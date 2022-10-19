@@ -15,18 +15,12 @@ export class ProductAddComponent implements OnInit {
   ngOnInit(): void {
     this.productForm = new FormGroup({
       'name': new FormControl(''),
-      'quantity': new FormControl(''),
-      'price': new FormControl(''),
-      'description': new FormControl(''),
     })
   }
   onSubmit() {
     let data = this.productForm.value;
     let product: Products = {
       name: data.name,
-      quantity: data.quantity,
-      price: data.price,
-      description: data.description,
     }
     this.ProductService.store(product).subscribe(() => {
       alert('Thêm sản phẩm thành công');

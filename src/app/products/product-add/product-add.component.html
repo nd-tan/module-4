@@ -7,28 +7,8 @@
       <input  formControlName="name" type="text" class="form-control" name="name">
       <!-- <small class="label label-danger"
     *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['email']">sai cu phap</small> -->
-  </div>
-  <div class="form-group">
-    <label>Price</label>
-    <input formControlName="price" type="number" class="form-control" name="price">
-    <!-- <small class="label label-danger"
-    *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['required']">không để rỗng</small>
-    <small class="label label-danger"
-    *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['minlength']">ít nhất 3 kí tự</small> -->
-
-  </div>
-  <div class="form-group">
-    <label>Quantity</label>
-    <input formControlName="quantity" type="number" class="form-control" name="quantity">
-    <!-- <small class="label label-danger"
-  *ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['email']">sai cu phap</small> -->
-</div>
-<div class="form-group">
-  <label>Description</label>
-  <textarea formControlName="description" type="text" class="form-control" name="description"></textarea>
-  <!-- <small class="label label-danger"
-*ngIf="formProfile.controls['username'].touched && formProfile.controls['username'].errors?.['email']">sai cu phap</small> -->
   </div><br>
+
   <button type="submit" [disabled]="!productForm.valid" class="btn btn-primary">Submit</button>
   <!-- <button (click)="onResetForm()" type="button" class="btn btn-danger">Reset</button> -->
   </form>
